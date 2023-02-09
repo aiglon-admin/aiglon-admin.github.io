@@ -17,7 +17,7 @@
         }
 
         body {
-            background: #eee;
+            background: #000000;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-size: 14px;
             color: #000;
@@ -37,7 +37,7 @@
         .swiper-slide {
             text-align: center;
             font-size: 18px;
-            background: #fff;
+            background: #000000;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -48,7 +48,8 @@
             display: block;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            /* object-fit: cover; */
         }
 
         .swiper-button-next,
@@ -100,6 +101,7 @@
 
     <!-- Initialize Swiper -->
     <script>
+        let zoomLevel = 1;
         var swiper = new Swiper(".mySwiper", {
             calculateHeight: true,
             navigation: {
@@ -108,9 +110,23 @@
             },
             effect: "slide",
             zoom: {
-                maxRatio: 1,
+                maxRatio: 5,
+                minRation: 1,
             },
+            // on: {
+            //     doubleTap: function (event) {
+            //         if(zoomLevel === 1){
+            //             zoomLevel = 3                        
+            //             this.zoom.in()
+            //         } else {
+            //             zoomLevel = 1
+            //             this.zoom.out()
+            //         }
+            //         console.log(`zoomLevel = ${zoomLevel}`);
+            //     }
+            // },
         });
+        
     </script>
 </body>
 
