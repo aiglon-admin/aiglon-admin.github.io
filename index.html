@@ -14,24 +14,25 @@
         body {
             position: relative;
             height: 100%;
-        }
-
-        body {
-            background: #000000;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
             color: #000;
+            background: #000000;
             margin: 0;
             padding: 0;
+
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
         }
+
 
         .swiper {
             width: 100%;
             height: 100%;
+            position: relative;
         }
 
         .swiper-wrapper {
             min-height: 100%;
+            position: relative;
         }
 
         .swiper-slide {
@@ -42,6 +43,26 @@
             justify-content: center;
             align-items: center;
             height: auto !important;
+        }
+
+        /* On screens that are 600px or less */
+        @media screen and (max-width: 600px) {
+            .upper-right {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+        }
+
+        /* On screens that are 600px or more, set the background color to white */
+        @media screen and (min-width: 600px) {
+            body {
+                background-color: #eee
+            }
+
+            .swiper-slide {
+                background: #eee;
+            }
         }
 
         .swiper-slide img {
@@ -91,9 +112,11 @@
             <div class="swiper-slide">
                 <div class="swiper-zoom-container"><img src="./Menu/AIGLON-Menu-AR-7.png"></div>
             </div>
+    
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next "></div>
+        <div class="swiper-button-prev "></div>
+
     </div>
 
     <!-- Swiper JS -->
@@ -126,7 +149,7 @@
             //     }
             // },
         });
-        
+
     </script>
 </body>
 
