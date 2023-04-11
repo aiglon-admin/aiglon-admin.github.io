@@ -5,157 +5,56 @@
     <meta charset="utf-8" />
     <title>AIGLON MENU</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-    <!-- Demo styles -->
     <style>
-        html,
         body {
-            position: relative;
-            height: 100%;
-            color: #000;
-            background: #000000;
-            margin: 0;
-            padding: 0;
-
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-        }
-
-
-        .swiper {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-
-        .swiper-wrapper {
-            min-height: 100%;
-            position: relative;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #000000;
+            background-image: url("images/Black-Background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: black;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: auto !important;
+            height: 100vh;
+            margin: 0;
         }
 
-        /* On screens that are 600px or less */
-        @media screen and (max-width: 600px) {
-            .upper-right {
-                position: absolute;
-                top: 0px;
-                right: 0px;
-            }
+        .logo {
+            margin-bottom: 32px;
         }
 
-        /* On screens that are 600px or more, set the background color to white */
-        @media screen and (min-width: 600px) {
-            body {
-                background-color: #eee
-            }
-
-            .swiper-slide {
-                background: #eee;
-            }
+        .logo img {
+            max-width: 100%;
+            height: auto;
         }
 
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            /* object-fit: cover; */
-        }
+        button {
+			font-size: 24px;
+			padding: 16px 0;
+			width: 200px;
+			border: none;
+			border-radius: 8px;
+			margin: 8px;
+			cursor: pointer;
+			background-color: rgb(139, 6, 6);
+			color: white;
+			text-align: center;
+		}
 
-        .swiper-button-next,
-        .swiper-button-prev {
-            /* background-color: white;
-            background-color: rgba(255, 255, 255, 0.5);
-            right: 10px;
-            padding: 30px;
-            fill: black !important;
-            stroke: red !important; */
-
-            color: rgb(139, 6, 6) !important;
+        button:hover {
+            background-color: #0069d9;
         }
     </style>
 </head>
 
 <body>
-    <!-- Swiper -->
-    <div class="swiper toggle mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container"><img src="./Menu/AIGLON-Menu-1.png"></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container"><img src="./Menu/AIGLON-Menu-2.png"></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container"><img src="./Menu/AIGLON-Menu-3.png"></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container"><img src="./Menu/AIGLON-Menu-4.png"></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container"><img src="./Menu/AIGLON-Menu-5.png"></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container"><img src="./Menu/AIGLON-Menu-6.png"></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container"><img src="./Menu/AIGLON-Menu-7.png"></div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="swiper-zoom-container"><img src="./Menu/AIGLON-Menu-8.png"></div>
-            </div>
-    
-        </div>
-        <div class="swiper-button-next "></div>
-        <div class="swiper-button-prev "></div>
-
+    <div class="logo">
+        <img src="images/logo-t.png" alt="Logo">
     </div>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        let zoomLevel = 1;
-        var swiper = new Swiper(".mySwiper", {
-            calculateHeight: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            effect: "slide",
-            direction: 'horizontal', 
-            zoom: {
-                maxRatio: 3,
-                minRation: 1,
-            },
-            // on: {
-            //     doubleTap: function (event) {
-            //         if(zoomLevel === 1){
-            //             zoomLevel = 3                        
-            //             this.zoom.in()
-            //         } else {
-            //             zoomLevel = 1
-            //             this.zoom.out()
-            //         }
-            //         console.log(`zoomLevel = ${zoomLevel}`);
-            //     }
-            // },
-        });
-
-    </script>
+    <a href="arabic.html"><button>Arabic</button></a>
+    <a href="english.html"><button>English</button></a>
 </body>
 
 </html>
