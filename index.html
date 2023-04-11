@@ -18,6 +18,15 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+
+            /* font-family: Calibri, sans-serif; */
+
+        }
+
+        .arabic {
+            font-family: "Calibri", sans-serif;
+            /* font-size: 24px; */
+            direction: rtl;
         }
 
         .logo {
@@ -30,17 +39,20 @@
         }
 
         button {
-			font-size: 24px;
-			padding: 16px 0;
-			width: 200px;
-			border: none;
-			border-radius: 8px;
-			margin: 8px;
-			cursor: pointer;
-			background-color: rgb(139, 6, 6);
-			color: white;
-			text-align: center;
-		}
+            font-size: 24px;
+            /* padding: 0px 0; */
+            width: 200px;
+            height: 60px;
+
+            border: none;
+            border-radius: 8px;
+            margin: 8px;
+            cursor: pointer;
+            background-color: rgb(139, 6, 6);
+            color: white;
+            text-align: center;
+            line-height: -10px;
+        }
 
         button:hover {
             background-color: #0069d9;
@@ -53,7 +65,7 @@
         <img src="images/logo-t.png" alt="Logo">
     </div>
 
-    <a href="arabic.html"><button>Arabic</button></a>
+    <a href="arabic.html"><button class="arabic">عربي</button></a>
     <a href="english.html"><button>English</button></a>
 </body>
 
